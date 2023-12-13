@@ -26,7 +26,7 @@ ip   -> 0000: sys 2
 ```
 Depending on the homework, the following instructions (or functions) will change.
 ### How is the stack implemented?
-The simulator has a stack that is 4-bytes long, where it grows down from the high address of 0xffff to 0x0000. This simulator does not support heap memory as it is outside the scope of the project. More so, the stack is implemented with a hash map, where the address is an integer key while the stack's value is stored as the associated value.
+The simulator has a stack that is 4-bytes long, where it grows down from the high address of 0xffff to 0x2000. This simulator does not support heap memory as it is outside the scope of the project. The stack is used within an integer array, where the index is supposed to represent the address and the value is the associated value.
 ### How many registers are implemented?
 The 4-byte reigsters implemented are described below:
 - ip: The simulator will execute the instruction that this register is set to (must be a multiple of 4)
@@ -50,4 +50,4 @@ The following inputs will call and execute the associated Java function:
 0. printString
 1. retAddr
 2. initRegs
-3. initStack
+3. exit
